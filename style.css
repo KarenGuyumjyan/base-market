@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 28px 0 140px 0;
+}
+
+.shelf {
+  position: relative;
+}
+
+.shelf #whine {
+  position: absolute;
+  left: 22px;
+  top: -3px;
+}
+
+.shelf #milk {
+  position: absolute;
+  left: 64px;
+  top: 31px;
+}
+
+.basket img {
+  position: absolute;
+}
+
+.basket img:not(:first-of-type) {
+  z-index: 1;
+  left: calc(35px * var(--img-index));
+  bottom: 48px;
+  width: calc(100% * 0.2);
+}
+.basket img:nth-of-type(2),
+.basket img:nth-of-type(7),
+.basket img:nth-of-type(12) {
+  --img-index: 2;
+  transform: rotate(-1.35deg);
+}
+.basket img:nth-of-type(3),
+.basket img:nth-of-type(8) {
+  z-index: 2;
+  --img-index: 3;
+  transform: rotate(-25.74deg);
+}
+.basket img:nth-of-type(4),
+.basket img:nth-of-type(9) {
+  --img-index: 4;
+  transform: rotate(7.43deg);
+}
+.basket img:nth-of-type(5),
+.basket img:nth-of-type(10) {
+  --img-index: 5;
+}
+.basket img:nth-of-type(6),
+.basket img:nth-of-type(11) {
+  --img-index: 6;
+}
+.basket img:nth-of-type(n + 7) {
+  bottom: 52px;
+  z-index: 3;
+}
+
+.shelf #jam {
+  position: absolute;
+  left: 103px;
+  top: 80px;
+}
+.shelf #cheese {
+  position: absolute;
+  left: 158px;
+  top: 89px;
+}
+
+.shelf #meat {
+  position: absolute;
+  left: 7px;
+  top: 167px;
+}
+.shelf #chicken {
+  position: absolute;
+  left: 58px;
+  top: 169px;
+}
+.shelf #chips {
+  position: absolute;
+  left: 129px;
+  top: 176px;
+}
+
+.shelf #pineapple {
+  position: absolute;
+  left: 13px;
+  top: 237px;
+}
+.shelf #banana {
+  position: absolute;
+  left: 58px;
+  top: 265px;
+}
+.shelf #apple {
+  position: absolute;
+  left: 115px;
+  top: 276px;
+}
+.shelf #lettuce {
+  position: absolute;
+  left: 156px;
+  top: 267px;
+}
+
+.basket {
+  position: absolute;
+  bottom: 0;
+}
+
+#trolley {
+  position: relative;
+}
+
+.submitButton {
+  display: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-family: 'YST', sans-serif;
+  font-size: 16px;
+  line-height: 17px;
+  padding: 20px 18px;
+  background-color: #fce000;
+  border: none;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  z-index: 10;
+}
+
+.submitButton:hover {
+  background-color: #ffec60;
+}
+
+.submitButton:active {
+  background-color: #c9b100;
+}
